@@ -14,3 +14,5 @@ class CreditCardPayment(suit):
 obj = CreditCardPayment() #Created variable amounts
 obj.paySlip ("$1500.00")
 obj.payment ("$1778.99")
+
+
