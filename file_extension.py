@@ -6,13 +6,11 @@ with conn:
                 col_filename TEXT)")
     conn.commit()
 
-conn = sqlite3.connect('extension.db')
-
 fileList = ('information.docx', 'Hello.txt', 'myImage.ong',\
             'myMovie.mpg', 'World. txt', 'data.pdf', 'myPhoto.jpg')
 
 for x in fileList:
-    if x.endswith('.txt'):
+    if x.endswith('World.txt'):
         with conn:
             cur = conn.cursor()
             cur.execute("INSERT INTO tbl_extension(col_filename) VALUES (?)", (x,))
