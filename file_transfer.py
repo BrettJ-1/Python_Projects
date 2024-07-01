@@ -3,6 +3,8 @@ from tkinter import *
 import tkinter.filedialog
 import os
 import shutil
+import time
+import datetime
 
 class ParentWindow(Frame):
     def __init__(self, master):
@@ -37,12 +39,13 @@ class ParentWindow(Frame):
         self.destination_dir.insert(0, selectDestDir)
 
     def transferFiles (self):
-        source = self. source_dir.get()
+        source = self.source_dir.get()
         destination = self.destination_dir.get()
         source_files = os.listdir(source)
         for i in source_files:
-            shutil.move (source + '/' + i, destination)
+            shutil.move (source + '/Documents/GitHub/Python_Projects/Customer Source' + i, destination)
             print (i + ' was successfully transferred.')
+
 
     def exit_program (self):
         root. destroy ()
@@ -51,7 +54,6 @@ if __name__ == "__main__":
     root = tk.Tk()
     App = ParentWindow(root)
     root.mainloop()
-
 
 
 
