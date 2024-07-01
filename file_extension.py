@@ -7,10 +7,10 @@ with conn:
     conn.commit()
 
 fileList = ('information.docx', 'Hello.txt', 'myImage.ong',\
-            'myMovie.mpg', 'World. txt', 'data.pdf', 'myPhoto.jpg')
+            'myMovie.mpg', 'World.txt', 'data.pdf', 'myPhoto.jpg')
 
 for x in fileList:
-    if x.endswith('World.txt'):
+    if x.endswith('.txt'):
         with conn:
             cur = conn.cursor()
             cur.execute("INSERT INTO tbl_extension(col_filename) VALUES (?)", (x,))
