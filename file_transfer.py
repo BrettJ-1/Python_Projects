@@ -31,7 +31,6 @@ class ParentWindow(Frame):
         selectSourceDir = tkinter.filedialog.askdirectory() #Allows user to insert Source Directory
         self.source_dir.delete(0, END)
         self.source_dir.insert(0, selectSourceDir)
-        self.source_dir.insert(0, selectSourceDir)
 
     def destDir (self):
         selectDestDir= tkinter.filedialog.askdirectory() #Allows user to insert Destination Directory
