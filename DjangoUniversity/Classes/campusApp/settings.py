@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [ #Shows which apps are installed in django project
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
